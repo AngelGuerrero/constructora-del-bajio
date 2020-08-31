@@ -1,0 +1,18 @@
+.brands__container {
+  background-color: #f9f9f9;
+
+  img {
+    max-width: 100px;
+    max-height: 100px;
+    transition: all 1s;
+    filter: saturate(10%);
+
+    &:hover {
+      filter: saturate(100%);
+    }
+  }
+}
+
+.brand__col {
+  margin-bottom: 50px !important;
+}
