@@ -1,19 +1,18 @@
-@import '../../../styles/_colors.scss';
+@import './styles/_variables.scss';
+@import './styles/_colors.scss';
 
 .nav {
   padding: 5px 0;
-
-  grid-column: 1/2;
-  grid-row: 1;
-
-  // background-color: #dadada;
   background-color: lighten($color: $enfasisColor, $amount: 7);
 
   @media screen and (min-width: 768px) {
+    height: $navbar_desktop_height;
+    width: $navbar_desktop_width;
+    position: fixed;
+    z-index: 20;
+    top: 0;
+    left: 0;
     background-color: $blueDark2;
-    overflow: hidden;
-    grid-column: 1/2;
-    grid-row: 1/2;
   }
 }
 

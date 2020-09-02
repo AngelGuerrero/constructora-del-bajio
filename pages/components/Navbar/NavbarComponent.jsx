@@ -1,5 +1,5 @@
 import { Container, Row, Col } from "react-bootstrap";
-import styles from "./Navbar.module.scss";
+import custom from "./Navbar.module.scss";
 
 export default function Navbar() {
   const menu_items = [
@@ -18,7 +18,7 @@ export default function Navbar() {
         <div className="h-100 d-flex justify-content-start align-items-center">
           <img
             src="/images/logo/logo.png"
-            className={`${styles.img} `}
+            className={`${custom.img} `}
             alt="logo"
             srcSet="/images/logo/logo.png"
           />
@@ -28,7 +28,7 @@ export default function Navbar() {
         <div className="h-100 d-flex justify-content-end align-items-center">
           <img
             src="/images/menu_hamburguer.png"
-            className={`${styles.img__menu} `}
+            className={`${custom.img__menu} `}
             alt="menu"
             srcSet="/images/menu_hamburguer.png"
           />
@@ -40,7 +40,7 @@ export default function Navbar() {
   // Menu in laptop screen
   const md_menu = (
     <div
-      className={`${styles.md_nav_menu} h-100 d-flex flex-column justify-content-between`}
+      className={`${custom.md_nav_menu} h-100 d-flex flex-column justify-content-between`}
     >
       <div className="h-25 d-flex justify-content-center align-items-center">
         <img
@@ -50,9 +50,9 @@ export default function Navbar() {
         />
       </div>
       <div className="h-50">
-        <ul className={styles.md_menu__items_container}>
+        <ul className={custom.md_menu__items_container}>
           {menu_items.map((item, index) => (
-            <li key={index} className={styles.md_menu_item}>
+            <li key={index} className={custom.md_menu_item}>
               <a href={item.link}>{item.title}</a>
             </li>
           ))}
@@ -61,7 +61,7 @@ export default function Navbar() {
     </div>
   );
   return (
-    <nav className={`${styles.nav}`}>
+    <nav className={`${custom.nav}`}>
       <Container fluid className="h-100">
         <div className="d-block d-md-none">{sm_menu}</div>
         <div className="d-none d-md-block h-100">{md_menu}</div>

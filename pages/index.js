@@ -1,15 +1,16 @@
 import Head from "next/head";
-import styles from "../styles/Home.module.scss";
+import custom from "../styles/Home.module.scss";
 
 import Navbar from "./components/Navbar/NavbarComponent";
 import Hero from "./components/Hero/HeroComponent";
-import About from "./components/About/AboutComponent"
-import Services from "./components/Services/ServicesComponent"
-import Brand from "./components/Brand/BrandComponent"
+import About from "./components/About/AboutComponent";
+import Services from "./components/Services/ServicesComponent";
+import Brand from "./components/Brand/BrandComponent";
+import Portfolio from "./components/Portfolio/PortfolioComponent";
 
-export default function Home() {
+const Home = () => { 
   return (
-    <div className={styles.container}>
+    <>
       <Head>
         <title>Constructora del bajío S.A. de C.V.</title>
         <link rel="icon" href="/favicon.ico" />
@@ -21,15 +22,18 @@ export default function Home() {
         <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap" rel="stylesheet"></link>
       </Head>
 
-      <main className={styles.main}>
+      <main className={custom.main}>
         <Navbar></Navbar>
-        <div className={styles.main__content}>
+        <div className={custom.main__content}>
           <Hero></Hero>
           <About></About>
           <Services></Services>
           <Brand></Brand>
+          <Portfolio></Portfolio>
         </div>
       </main>
-    </div>
+    </>
   );
 }
+
+export default Home
