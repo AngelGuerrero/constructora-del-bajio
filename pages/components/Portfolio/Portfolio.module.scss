@@ -2,5 +2,11 @@
 @import './styles/_colors.scss';
 
 .portfolio__container {
-  background-color: rgb(238, 238, 238);
+  background-color: $blueDark;
+  color: white;
+  overflow: hidden;
+}
+
+.project__container {
+  margin-bottom: 200px !important;
 }
