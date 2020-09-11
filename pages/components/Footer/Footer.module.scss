@@ -1,0 +1,22 @@
+@import "./styles/_colors.scss";
+
+.footer__container {
+  background-color: black;
+  min-height: 100px;
+  color: white;
+
+  a:hover {
+    color: pink;
+    text-decoration: none;
+  }
+}
+
+.footer__enterprise_name {
+  font-size: 20px !important;
+}
+.footer__pincoders {
+  font-size: 14px;
+  span {
+    color: pink;
+  }
+}

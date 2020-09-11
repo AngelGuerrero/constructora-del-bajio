@@ -1,0 +1,18 @@
+@import './styles/_variables.scss';
+@import './styles/_colors.scss';
+
+.services__container {
+  min-height: 50vh;
+  background-color: white;
+  background-image: url('/images/lines_pattern.png');
+}
+
+.service__box {
+  transition: all 1s;
+  background-color: white;
+
+  &:hover {
+    box-shadow: none !important;
+    color: $enfasisColor !important;
+  }
+}

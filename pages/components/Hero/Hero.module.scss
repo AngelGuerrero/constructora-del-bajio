@@ -1,0 +1,126 @@
+@import "./styles/_colors.scss";
+
+.hero__container {
+  position: relative;
+
+  // Line
+  &::before {
+    content: "";
+    width: 10px;
+    height: 20%;
+    background-color: yellow;
+    position: absolute;
+    z-index: 5;
+    bottom: 0;
+    left: 5%;
+
+    @media screen and (min-width: 748px) {
+      height: 30%;
+    }
+  }
+
+  // overlay screen
+  &::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #4444449f;
+    background-image: url("/images/pattern.png");
+
+    @media screen and (min-width: 768px) {
+      background-color: #0200479f;
+    }
+
+    @media screen and (min-width: 810px) {
+      width: 70%;
+    }
+
+    @media screen and (min-width: 992px) {
+      width: 60%;
+    }
+  }
+}
+
+.my_carousel__item {
+  height: 100vh;
+
+  img {
+    position: absolute;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+  }
+}
+
+.box__text {
+  width: 90%;
+  position: absolute;
+  z-index: 9;
+  top: 40%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  text-align: left;
+
+  @media screen and (min-width: 768px) {
+    width: auto;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%) translateX(0%);
+  }
+}
+
+.hero__image {
+  width: 80%;
+
+  @media screen and (min-width: 576px) {
+    width: 60%;
+  }
+}
+
+.title__enfasis {
+  font-family: "Cy", sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: black;
+  word-spacing: -5px;
+}
+
+.box__title {
+  font-family: "Cy", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: $enfasisColor1;
+}
+
+.box__title_1 {
+  @extend .box__title;
+  font-size: 1.8rem;
+
+  @media screen and (min-width: 576px) {
+    font-size: 2.5rem;
+  }
+}
+
+.box__title_2 {
+  @extend .box__title;
+  font-size: 1.7rem;
+
+  @media screen and (min-width: 576px) {
+    font-size: 2.5rem;
+  }
+}
+
+.box__title_3 {
+  @extend .box__title;
+  font-size: 1.5rem;
+
+  @media screen and (min-width: 576px) {
+    font-size: 2rem;
+  }
+}

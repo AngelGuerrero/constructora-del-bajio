@@ -1,18 +1,44 @@
 import Head from "next/head";
-import styles from "../styles/Home.module.css";
+import custom from "../styles/Home.module.scss";
 
-export default function Home() {
+import Navbar from "./components/Navbar/NavbarComponent";
+import Hero from "./components/Hero/HeroComponent";
+import About from "./components/About/AboutComponent";
+import Services from "./components/Services/ServicesComponent";
+import Brand from "./components/Brand/BrandComponent";
+import Portfolio from "./components/Portfolio/PortfolioComponent";
+import Contact from "./components/Contact/ContactComponent";
+import Footer from "./components/Footer/FooterComponent";
+
+
+const Home = () => { 
   return (
-    <div className={styles.container}>
+    <>
       <Head>
         <title>Constructora del bajío S.A. de C.V.</title>
         <link rel="icon" href="/favicon.ico" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap"
+          rel="stylesheet"
+        ></link>
+        <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet"></link>
+        <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap" rel="stylesheet"></link>
       </Head>
 
-      <main>
-        <h1>Constructora del bajío S.A. de C.V.</h1>
-        <h4>Sitio web en construcción</h4>
+      <main className={custom.main}>
+        <Navbar></Navbar>
+        <div className={custom.main__content}>
+          <Hero></Hero>
+          <About></About>
+          <Services></Services>
+          <Brand></Brand>
+          <Portfolio></Portfolio>
+          <Contact></Contact>
+          <Footer></Footer>
+        </div>
       </main>
-    </div>
+    </>
   );
 }
+
+export default Home

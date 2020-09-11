@@ -1,0 +1,35 @@
+@import '../styles/_variables.scss';
+@import '../styles/_colors.scss';
+
+.dev {
+  border: 1px dashed tomato;
+}
+
+.main {
+  // settings
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (min-width: 768px) {
+    margin-left: $navbar_desktop_width;
+    // height: 100vh;
+    // overflow: auto;
+    flex-direction: row;
+    // navbar | container
+    // grid-template-columns: 170px auto;
+    // grid-template-rows: auto;
+
+    background-color: black;
+  }
+}
+
+.main__content {
+  flex-grow: 1;
+  // height: 100vh;
+  // overflow: auto;
+}
+
+.separator {
+  height: 100px;
+  background-color: #fcbf49;
+}
