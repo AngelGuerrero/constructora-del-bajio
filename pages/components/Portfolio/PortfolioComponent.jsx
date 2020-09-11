@@ -106,8 +106,14 @@ const portfolio = () => {
                           alt={project.name}
                         />
                       </div>
-                      <h2 className="my-2 d-block d-md-none">{project.name}</h2>
-                      <h3 data-aos="fade-left" data-aos-delay="2000">
+                      <h2 className="my-2 d-block d-md-none title">
+                        {project.name}
+                      </h2>
+                      <h3
+                        data-aos="fade-left"
+                        data-aos-delay="2000"
+                        className="title"
+                      >
                         {project.title}
                       </h3>
                       <h6 data-aos="fade-left" data-aos-delay="2000">

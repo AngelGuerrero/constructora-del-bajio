@@ -7,6 +7,9 @@ import About from "./components/About/AboutComponent";
 import Services from "./components/Services/ServicesComponent";
 import Brand from "./components/Brand/BrandComponent";
 import Portfolio from "./components/Portfolio/PortfolioComponent";
+import Contact from "./components/Contact/ContactComponent";
+import Footer from "./components/Footer/FooterComponent";
+
 
 const Home = () => { 
   return (
@@ -30,6 +33,8 @@ const Home = () => {
           <Services></Services>
           <Brand></Brand>
           <Portfolio></Portfolio>
+          <Contact></Contact>
+          <Footer></Footer>
         </div>
       </main>
     </>
